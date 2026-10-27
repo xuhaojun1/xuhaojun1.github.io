@@ -1,0 +1,37 @@
+[
+  {
+    "checkpoint_step": 50,
+    "total": 82.7593,
+    "quality": 84.0608,
+    "semantic": 77.5533,
+    "dynamic": 39.1667
+  },
+  {
+    "checkpoint_step": 100,
+    "total": 83.8961,
+    "quality": 85.2446,
+    "semantic": 78.5021,
+    "dynamic": 61.3889
+  },
+  {
+    "checkpoint_step": 150,
+    "total": 84.2748,
+    "quality": 85.8399,
+    "semantic": 78.0145,
+    "dynamic": 73.8889
+  },
+  {
+    "checkpoint_step": 200,
+    "total": 84.5,
+    "quality": 85.9663,
+    "semantic": 78.6349,
+    "dynamic": 75.2778
+  },
+  {
+    "checkpoint_step": 250,
+    "total": 84.6279,
+    "quality": 86.0149,
+    "semantic": 79.0795,
+    "dynamic": 75.5556
+  }
+]

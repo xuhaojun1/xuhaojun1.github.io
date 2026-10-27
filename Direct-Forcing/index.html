@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Direct Forcing trains a few-step autoregressive video generator in a single stage with representation-space supervision. 84.63 VBench Total in 250 joint updates.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://xuhaojun1.github.io/Direct-Forcing/">
+  <meta property="og:url" content="https://xuhaojun1.github.io/Direct-Forcing/">
+  <meta property="og:title" content="Direct Forcing — Single-Stage Autoregressive Video Generation">
+  <meta property="og:description" content="Causal continuation alignment and rollout distribution matching. One training stage, four-step video generation, 84.63 VBench Total.">
+  <meta property="og:image" content="https://xuhaojun1.github.io/Direct-Forcing/static/figures/social-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://xuhaojun1.github.io/Direct-Forcing/static/figures/social-preview.jpg">
+  <meta name="citation_title" content="Direct Forcing: Single-Stage Training with Representation-Space Supervision for Few-Step Autoregressive Video Generation">
+  <meta name="citation_author" content="Haojun Xu">
+  <meta name="citation_author" content="Jie Huang">
+  <meta name="citation_author" content="Chuyang Zhao">
+  <meta name="citation_author" content="Xin Lu">
+  <meta name="citation_author" content="Mingchen Zhong">
+  <meta name="citation_author" content="Zihao Fan">
+  <meta name="citation_author" content="Haoyang Huang">
+  <meta name="citation_author" content="Linjiang Huang">
+  <meta name="citation_author" content="Si Liu">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2610.30861">
+  <title>Direct Forcing | Single-Stage Autoregressive Video Generation</title>
+  <link rel="icon" type="image/svg+xml" href="static/figures/favicon.svg">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/project.css?v=20261027-panel-headings">
+  <script defer src="data/gallery-data.js?v=20261027-panel-headings"></script>
+  <script defer src="static/js/project.js?v=20261027-panel-headings"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <div class="nav-links"><a href="#samples">Videos</a><a href="#method">Method</a><a href="#results">Results</a><a class="nav-code" href="https://github.com/xuhaojun1/Direct-Forcing" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero-section" id="top" aria-labelledby="paper-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="page-shell hero-inner">
+        <div class="eyebrow"><span class="status-dot"></span> Few-step autoregressive video generation</div>
+        <h1 id="paper-title">Direct <em>Forcing</em><span>Single-Stage Training with Representation-Space Supervision<br class="desktop-break"> for Few-Step Autoregressive Video Generation</span></h1>
+        <div class="authors" aria-label="Authors">
+          <span>Haojun Xu<sup>1,2</sup></span>
+          <span>Jie Huang<sup>2,*,‡</sup></span>
+          <span>Chuyang Zhao<sup>2,‡</sup></span>
+          <span>Xin Lu<sup>2</sup></span>
+          <span>Mingchen Zhong<sup>2</sup></span>
+          <br class="desktop-break">
+          <span>Zihao Fan<sup>2</sup></span>
+          <span>Haoyang Huang<sup>2</sup></span>
+          <span>Linjiang Huang<sup>1,†</sup></span>
+          <span>Si Liu<sup>1</sup></span>
+        </div>
+        <p class="affiliations"><span><sup>1</sup> Beihang University</span><span><sup>2</sup> JD Future Academy</span></p>
+        <p class="author-notes"><span>* Co-first author</span><span>† Corresponding author</span><span>‡ Project leader</span></p>
+        <div class="resource-links">
+          <a class="pill-button primary" href="https://arxiv.org/abs/2610.30861" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v5h4M10 12h5M10 16h5"/></svg>Paper <span aria-hidden="true">↗</span></a>
+          <a class="pill-button" href="https://github.com/xuhaojun1/Direct-Forcing" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></svg>Code <span aria-hidden="true">↗</span></a>
+          <a class="pill-button" href="#samples"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 5 10 7-10 7z"/></svg>Explore videos</a>
+        </div>
+        <p class="hero-statement">Learn <strong>how videos continue</strong> and <strong>what they look like</strong> — together,<br class="desktop-break"> directly in representation space.</p>
+        <div class="metric-strip" aria-label="Main model highlights">
+          <div class="metric"><span class="metric-value">84.63</span><span class="metric-label">VBench Total</span></div>
+          <div class="metric"><span class="metric-value">250</span><span class="metric-label">Joint training updates</span></div>
+        </div>
+        <div id="hero-strip" class="hero-strip" aria-label="Preview of selected generations"></div>
+        <a class="scroll-cue" href="#samples">See the generations <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="page-shell section-block" id="samples" aria-labelledby="samples-title">
+      <div class="section-heading editorial-heading gallery-heading"><span class="section-number" aria-hidden="true">01 /</span><div><h2 id="samples-title">Selected generations</h2><p class="section-caption">Few steps. Vivid worlds.</p></div><button id="autoplay-toggle" class="preview-toggle" aria-pressed="true"><span aria-hidden="true">Ⅱ</span> Pause previews</button></div>
+      <div id="video-gallery" class="video-gallery"></div>
+      <noscript><p>Please enable JavaScript to browse the selected videos. The original files are in <code>static/videos/</code>.</p></noscript>
+    </section>
+
+    <section class="method-section" id="method" aria-labelledby="method-title">
+      <div class="page-shell section-block">
+        <div class="section-heading editorial-heading"><span class="section-number" aria-hidden="true">02 /</span><div><h2 id="method-title">The idea</h2><p class="section-caption">Two signals. One training stage.</p></div></div>
+        <div class="method-cards">
+          <article class="method-card cca-card"><span class="method-index">CCA</span><h3>Learn the continuation</h3><p><strong>Causal Continuation Alignment</strong> learns how a video continues through paired feature alignment under reference histories.</p></article>
+          <article class="method-card rdm-card"><span class="method-index">RDM</span><h3>Match the distribution</h3><p><strong>Rollout Distribution Matching</strong> aligns self-generated and reference video distributions in frozen feature spaces.</p></article>
+          <article class="method-card balance-card"><span class="method-index">GNM + REW</span><h3>Balance the gradients</h3><p><strong>Gradient Norm Matching</strong> balances the two signals; <strong>Residual Error Weighting</strong> adapts CCA’s contribution.</p></article>
+        </div>
+        <figure class="method-figure"><a href="static/figures/method.png" target="_blank" rel="noopener noreferrer" aria-label="View Direct Forcing method diagram at full size"><img src="static/figures/method.png" width="1920" height="750" loading="lazy" alt="Direct Forcing: reference histories supervise CCA; generated histories supervise RDM; GNM and REW combine their gradients into a joint generator update."></a></figure>
+      </div>
+    </section>
+
+    <section class="page-shell section-block" id="results" aria-labelledby="results-title">
+      <div class="section-heading editorial-heading"><span class="section-number" aria-hidden="true">03 /</span><div><h2 id="results-title">Results</h2><p class="section-caption">250 updates. 84.63 VBench Total.</p></div></div>
+      <div class="benchmark-panel">
+        <div class="panel-heading"><h3>VBench performance</h3></div>
+        <div class="table-scroll" role="region" aria-label="VBench performance comparison" tabindex="0">
+          <table class="benchmark-table"><caption class="sr-only">Text-to-video VBench comparison from Table 2. Scores are percentages; higher is better. Latency is time to first frame.</caption>
+            <thead><tr><th scope="col">Model</th><th scope="col">Params</th><th scope="col">Resolution</th><th scope="col">Throughput ↑ <small>(fps)</small></th><th scope="col">Latency <small>(seconds)</small></th><th scope="col">Total ↑</th><th scope="col">Quality ↑</th><th scope="col">Semantic ↑</th></tr></thead>
+          <tbody><tr class="table-group"><th colspan="8" scope="rowgroup">Bidirectional video diffusion models</th></tr>
+            <tr><th scope="row">LTX-Video-1.9B</th><td>1.9B</td><td>768 × 512</td><td>8.98</td><td>13.5</td><td>79.83</td><td>81.88</td><td>71.62</td></tr>
+            <tr><th scope="row">Wan2.1-1.3B</th><td>1.3B</td><td>832 × 480</td><td>0.78</td><td>103</td><td>83.37</td><td>84.30</td><td>79.65</td></tr>
+          </tbody>
+          <tbody><tr class="table-group"><th colspan="8" scope="rowgroup">Autoregressive video diffusion models</th></tr>
+            <tr><th scope="row">NOVA</th><td>0.6B</td><td>768 × 480</td><td>0.88</td><td>4.1</td><td>80.31</td><td>80.66</td><td>78.92</td></tr>
+            <tr><th scope="row">Pyramid Flow</th><td>2.0B</td><td>640 × 384</td><td>6.7</td><td>2.5</td><td>80.75</td><td>83.41</td><td>70.11</td></tr>
+            <tr><th scope="row">SkyReels-V2-1.3B</th><td>1.3B</td><td>960 × 540</td><td>0.49</td><td>112</td><td>81.97</td><td>83.96</td><td>74.01</td></tr>
+            <tr><th scope="row">MAGI-1-4.5B</th><td>4.5B</td><td>832 × 480</td><td>0.19</td><td>282</td><td>78.88</td><td>81.67</td><td>67.72</td></tr>
+          </tbody>
+          <tbody><tr class="table-group"><th colspan="8" scope="rowgroup">Four-step causal video models</th></tr>
+            <tr><th scope="row">CausVid</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td>81.33</td><td>83.98</td><td>70.72</td></tr>
+            <tr><th scope="row">Self Forcing</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td>83.74</td><td>84.48</td><td>80.77</td></tr>
+            <tr><th scope="row">Causal Forcing</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td>84.04</td><td>84.59</td><td class="best-score">81.84</td></tr>
+            <tr><th scope="row">LongLive</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td>83.62</td><td>84.36</td><td>80.69</td></tr>
+            <tr><th scope="row">ViRDM</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td>83.41</td><td>84.11</td><td>80.61</td></tr>
+            <tr><th scope="row">Elastic Forcing</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td>84.25</td><td>85.06</td><td>80.99</td></tr>
+            <tr><th scope="row">Causal-rCM</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td>84.37</td><td>85.02</td><td>81.73</td></tr>
+            <tr class="ours-row"><th scope="row">Direct Forcing</th><td>1.3B</td><td>832 × 480</td><td>20.63</td><td>0.25</td><td class="best-score">84.63</td><td class="best-score">86.01</td><td>79.08</td></tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="results-grid">
+        <figure class="chart-panel"><div class="panel-heading"><h3>Training progress</h3></div><img src="static/figures/training-progress.svg" width="650" height="390" loading="lazy" alt="VBench scores at 50, 100, 150, 200 and 250 training updates: Total increases from 82.76 to 84.63."></figure>
+        <div class="score-panel budget-panel">
+          <div class="panel-heading"><h3>A shorter training path</h3></div>
+          <div class="table-scroll" role="region" aria-label="Training update comparison" tabindex="0"><table class="budget-table"><caption class="sr-only">Training updates from bidirectional Wan2.1-1.3B to four-step generation, including inherited initialization stages.</caption><thead><tr><th scope="col">Method</th><th scope="col">AR teacher</th><th scope="col">ODE init.</th><th scope="col">DMD / MMD</th><th scope="col">Total updates ↓</th></tr></thead><tbody>
+            <tr><th scope="row">Self Forcing</th><td>—</td><td>3,000</td><td>750</td><td>3,750</td></tr>
+            <tr><th scope="row">Causal Forcing</th><td>2,000</td><td>1,000</td><td>750</td><td>3,750</td></tr>
+            <tr><th scope="row">ViRDM</th><td>2,000</td><td>1,000</td><td>20</td><td>3,020</td></tr>
+            <tr><th scope="row">Elastic Forcing</th><td>—</td><td>3,000</td><td>150</td><td>3,150</td></tr>
+            <tr class="ours-row"><th scope="row">Direct Forcing</th><td>—</td><td>—</td><td>250</td><td class="best-score">250</td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="citation-section" id="citation" aria-labelledby="citation-title"><div class="page-shell citation-inner"><div><h2 id="citation-title">Citation</h2></div><div class="citation-code"><button id="copy-citation" class="copy-button">Copy BibTeX</button><pre><code id="bibtex">@article{xu2026directforcing,
+  title={Direct Forcing: Single-Stage Training with Representation-Space Supervision for Few-Step Autoregressive Video Generation},
+  author={Xu, Haojun and Huang, Jie and Zhao, Chuyang and Lu, Xin and Zhong, Mingchen and Fan, Zihao and Huang, Haoyang and Huang, Linjiang and Liu, Si},
+  journal={arXiv preprint arXiv:2610.30861},
+  year={2026}
+}</code></pre><span id="copy-status" class="sr-only" role="status" aria-live="polite"></span></div></div></section>
+  </main>
+  <footer class="site-footer page-shell"><span>Direct Forcing · Beihang University & JD Future Academy</span><span>Website adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></span></footer>
+  <dialog id="video-dialog" aria-labelledby="dialog-title"><div class="dialog-content"><button id="dialog-close" class="dialog-close" aria-label="Close video">×</button><video id="dialog-video" controls playsinline muted loop preload="none"></video><div class="dialog-caption"><div class="dialog-title-row"><div><h2 id="dialog-title"></h2></div><div class="dialog-navigation"><button id="dialog-prev" aria-label="Previous video">←</button><span id="dialog-position"></span><button id="dialog-next" aria-label="Next video">→</button></div></div><p id="dialog-short-prompt"></p><details id="dialog-prompt-details" open><summary>Full generation prompt</summary><p id="dialog-full-prompt"></p></details></div></div></dialog>
+</body>
+</html>

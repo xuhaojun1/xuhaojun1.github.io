@@ -22,7 +22,7 @@ Open <http://127.0.0.1:8766/>. The server binds only to the local computer. Choo
 - `static/css/project.css`: layout and typography.
 - `static/js/project.js`: lazy previews and video dialogs.
 - `data/gallery.json` and `data/gallery-data.js`: the same ordered gallery metadata. Keep them synchronized.
-- `static/videos/` and `static/posters/`: the 20 selected generations and thumbnails.
+- `static/videos/` and `static/posters/`: the selected generations and thumbnails.
 - `static/figures/`: method figure, training curve, favicon and social preview.
 - `data/benchmark.json` and `data/training-progress.json`: the reported result data.
 - `site.json`: code-repository and GitHub Pages configuration.

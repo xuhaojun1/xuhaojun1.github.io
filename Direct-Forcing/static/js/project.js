@@ -108,9 +108,9 @@
     observer.observe(card);
   }
   // Reuse four gallery clips, including reviewed motion-active examples.
-  const heroOrders = [1, 2, 8, 4];
-  for (const order of heroOrders) {
-    const item = cases.find(item => item.order === order);
+  const heroIds = ["05_step250_p0689_s3", "06_step250_p0773_s0", "11_step250_p0767_s2", "02_step250_p0741_s4"];
+  for (const id of heroIds) {
+    const item = cases.find(item => item.id === id);
     if (!item) continue;
     const preview = document.createElement("a");
     preview.className = "hero-preview";

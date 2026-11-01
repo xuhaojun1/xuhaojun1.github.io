@@ -119,25 +119,8 @@
     "sample_index": 2
   },
   {
-    "id": "08_step250_p0740_s2",
-    "order": 8,
-    "title": "A train through the mountains",
-    "category": "Everyday",
-    "model": "step250",
-    "updates": 250,
-    "model_total": 84.6279,
-    "media_kind": "vbench",
-    "width": 832,
-    "height": 480,
-    "prompt": "A steam train moving on a mountainside",
-    "expanded_prompt": "A vintage steam locomotive chugging along a winding track on a mountainous terrain. The train is covered in soot, with steam billowing from its smokestack as it navigates the rugged landscape. The surrounding mountains are steep and lush, with patches of snow visible at higher elevations. The train cars sway gently as they follow the curving tracks, and the scenery outside the windows shows dense forests and rocky cliffs. The camera follows the train from a medium distance, capturing the train's movement and the dramatic backdrop.",
-    "video": "static/videos/08_step250_p0740_s2.mp4",
-    "poster": "static/posters/08_step250_p0740_s2.jpg",
-    "sample_index": 2
-  },
-  {
     "id": "11_step250_p0767_s2",
-    "order": 9,
+    "order": 8,
     "title": "A smoke tornado over the city",
     "category": "Fantasy",
     "model": "step250",
@@ -154,7 +137,7 @@
   },
   {
     "id": "13_step250_p0724_s2",
-    "order": 10,
+    "order": 9,
     "title": "Purple plums, up close",
     "category": "Everyday",
     "model": "step250",
@@ -171,7 +154,7 @@
   },
   {
     "id": "14_step150_p0712_s2",
-    "order": 11,
+    "order": 10,
     "title": "A campfire under the stars",
     "category": "Nature",
     "model": "step150",
@@ -188,7 +171,7 @@
   },
   {
     "id": "16_step150_p0771_s3",
-    "order": 12,
+    "order": 11,
     "title": "A stroll along the Bund",
     "category": "Everyday",
     "model": "step150",
@@ -205,7 +188,7 @@
   },
   {
     "id": "17_step250_p0292_s4",
-    "order": 13,
+    "order": 12,
     "title": "Across a quiet lake",
     "category": "Nature",
     "model": "step250",
@@ -222,7 +205,7 @@
   },
   {
     "id": "18_step150_p0736_s3",
-    "order": 14,
+    "order": 13,
     "title": "A luminous ocean drift",
     "category": "Nature",
     "model": "step150",
@@ -239,7 +222,7 @@
   },
   {
     "id": "19_step250_p0495_s4",
-    "order": 15,
+    "order": 14,
     "title": "A painted coastal afternoon",
     "category": "Style",
     "model": "step250",
@@ -256,7 +239,7 @@
   },
   {
     "id": "20_training_row1784_step080",
-    "order": 16,
+    "order": 15,
     "title": "Under the neon streetlamp",
     "category": "Characters",
     "model": "training_preview",
@@ -273,7 +256,7 @@
   },
   {
     "id": "21_training_row3000_step080",
-    "order": 17,
+    "order": 16,
     "title": "Into the ancient chambers",
     "category": "Fantasy",
     "model": "training_preview",
@@ -289,25 +272,8 @@
     "sample_index": null
   },
   {
-    "id": "22_training_row1241_step100",
-    "order": 18,
-    "title": "A quiet moment on the coach",
-    "category": "Characters",
-    "model": "training_preview",
-    "updates": 100,
-    "model_total": null,
-    "media_kind": "training_preview",
-    "width": 416,
-    "height": 240,
-    "prompt": "A man dozes beside the window on a gently rocking coach.",
-    "expanded_prompt": "A middle-aged African American man, referred to as Stig, is sitting on a long-distance coach seat in a dimly lit bus interior. He is nodding off to sleep, his head drooping slightly as he leans against the window. His posture is relaxed, with one arm resting on the seat and the other loosely hanging over the armrest. The bus is moving, causing a gentle rocking motion. The background shows other passengers in the periphery, but they are less focused. Soft lighting from the bus creates a cozy, sleepy atmosphere. Medium shot focusing on Stig.",
-    "video": "static/videos/22_training_row1241_step100.mp4",
-    "poster": "static/posters/22_training_row1241_step100.jpg",
-    "sample_index": null
-  },
-  {
     "id": "23_training_row2812_step120",
-    "order": 19,
+    "order": 17,
     "title": "Flying alongside the airliner",
     "category": "Fantasy",
     "model": "training_preview",
@@ -324,7 +290,7 @@
   },
   {
     "id": "20_step150_p0755_s0",
-    "order": 20,
+    "order": 18,
     "title": "An ocean-side serenade",
     "category": "Fantasy",
     "model": "step150",
